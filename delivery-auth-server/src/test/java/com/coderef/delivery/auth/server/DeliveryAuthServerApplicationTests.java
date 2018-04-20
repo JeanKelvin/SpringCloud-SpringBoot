@@ -1,4 +1,4 @@
-package com.coderef.deliveryauthserver;
+package com.coderef.delivery.auth.server;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
