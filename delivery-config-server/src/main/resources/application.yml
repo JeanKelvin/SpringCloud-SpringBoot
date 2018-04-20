@@ -1,0 +1,10 @@
+server:
+  port: 9090
+
+#Repositório git que será usado para fornecer os arquivos que o Servidor de Configuração irá disponibilizar para os outros Microservices via HTTP
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/JeanKelvin/delivery-configs
