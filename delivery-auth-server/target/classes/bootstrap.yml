@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: delivery-auth-server
+  cloud:
+    config:
+      uri: http://localhost:9090 #Host do Config Server onde a aplicação irá buscar as propriedades de configuração durante a inicialização com base no valor de spring.application.name

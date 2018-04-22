@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="oauth@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="oauth">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="sakila"/>
+    <schema id="7" parent="1" name="sys"/>
+    <schema id="8" parent="1" name="world"/>
+    <table id="9" parent="2" name="authority"/>
+    <table id="10" parent="2" name="oauth_access_token"/>
+    <table id="11" parent="2" name="oauth_client_details"/>
+    <table id="12" parent="2" name="oauth_refresh_token"/>
+    <table id="13" parent="2" name="user"/>
+    <table id="14" parent="2" name="user_authority"/>
+    <column id="15" parent="9" name="name">
+      <Position>1</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="16" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>name</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="17" parent="10" name="token_id">
+      <Position>1</Position>
+      <DataType>varchar(256)|0</DataType>
+    </column>
+    <column id="18" parent="10" name="token">
+      <Position>2</Position>
+      <DataType>blob|0</DataType>
+    </column>
+    <column id="19" parent="10" name="authentication_id">
+      <Position>3</Position>
+      <DataType>varchar(256)|0</DataType>
+    </column>
+    <column id="20" parent="10" name="user_name">
+      <Position>4</Position>
+      <DataType>varchar(256)|0</DataType>
+    </column>
+    <column id="21" parent="10" name="client_id">
+      <Position>5</Position>
+      <DataType>varchar(256)|0</DataType>
+    </column>
+    <column id="22" parent="10" name="authentication">
+      <Position>6</Position>
+      <DataType>blob|0</DataType>
+    </column>
+    <column id="23" parent="10" name="refresh_token">
+      <Position>7</Position>
+      <DataType>varchar(256)|0</DataType>
+    </column>
+    <column id="24" parent="11" name="client_id">
+      <Position>1</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="11" name="resource_ids">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="26" parent="11" name="client_secret">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="27" parent="11" name="scope">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="28" parent="11" name="authorized_grant_types">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="29" parent="11" name="web_server_redirect_uri">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="30" parent="11" name="authorities">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="31" parent="11" name="access_token_validity">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="32" parent="11" name="refresh_token_validity">
+      <Position>9</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="33" parent="11" name="additional_information">
+      <Position>10</Position>
+      <DataType>varchar(4096)|0</DataType>
+    </column>
+    <column id="34" parent="11" name="autoapprove">
+      <Position>11</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="35" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>client_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="36" parent="12" name="token_id">
+      <Position>1</Position>
+      <DataType>varchar(256)|0</DataType>
+    </column>
+    <column id="37" parent="12" name="token">
+      <Position>2</Position>
+      <DataType>blob|0</DataType>
+    </column>
+    <column id="38" parent="12" name="authentication">
+      <Position>3</Position>
+      <DataType>blob|0</DataType>
+    </column>
+    <column id="39" parent="13" name="username">
+      <Position>1</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="13" name="email">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="41" parent="13" name="password">
+      <Position>3</Position>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="42" parent="13" name="activated">
+      <Position>4</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="43" parent="13" name="activationkey">
+      <Position>5</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="44" parent="13" name="resetpasswordkey">
+      <Position>6</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <key id="45" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>username</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="46" parent="14" name="username">
+      <Position>1</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="47" parent="14" name="authority">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="48" parent="14" name="authority">
+      <ColNames>authority</ColNames>
+    </index>
+    <index id="49" parent="14" name="user_authority_idx_1">
+      <ColNames>username
+authority</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="50" parent="14" name="user_authority_idx_1">
+      <ColNames>username
+authority</ColNames>
+      <UnderlyingIndexName>user_authority_idx_1</UnderlyingIndexName>
+    </key>
+    <foreign-key id="51" parent="14" name="user_authority_ibfk_1">
+      <ColNames>username</ColNames>
+      <RefSchemaName>oauth</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>username</RefColNames>
+    </foreign-key>
+    <foreign-key id="52" parent="14" name="user_authority_ibfk_2">
+      <ColNames>authority</ColNames>
+      <RefSchemaName>oauth</RefSchemaName>
+      <RefTableName>authority</RefTableName>
+      <RefColNames>name</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
